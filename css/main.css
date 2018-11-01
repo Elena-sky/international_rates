@@ -93,7 +93,7 @@ body {
 .selectWrapper {
     border:1px solid #e6e6e6;
     border-radius:5px;
-    padding:24px 0 5px 24px;
+    padding:24px;
     margin-left:22px;
 }
 
@@ -110,39 +110,4 @@ body {
 
 #selectArea .selectHolder.holded {
     color:#CCC;
-}
-
-.selectWrapper #tableCenter {
-    clear:both;
-    padding-left:0;
-    padding-top:20px;
-    padding-right:26px;
-}
-
-.selectWrapper .WaitBlock {
-    position: relative;
-    left: 222px;
-}
-
-.selectWrapper #resultTable {
-    width: 100%;
-    color: #333;
-}
-
-.selectWrapper .headTable {
-    font-weight:bold;
-}
-.selectWrapper .greyRow td {
-    background:#d9e0e4;
-}
-.selectWrapper #colCountry {
-    width:100px;
-}
-
-.selectWrapper #colType {
-    width:100px;
-}
-
-.selectWrapper #colCode {
-    width:160px;
 }

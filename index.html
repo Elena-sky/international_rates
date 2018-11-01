@@ -10,26 +10,21 @@
 </head>
 <body>
 <div id="wrapper">
-    <div class="parsys_column cq-colctrl-lt0-c0">
-        <div id="headline">
-            <h1 class="headlineTitle">International dialing<br> rates from North America</h1>
-        </div>
-        <div class="subheader">
-            <h3 class="headlineSubtitle">Review current international rates</h3>
+    <div>
+        <div>
+            <h1>International dialing rates from North America</h1>
+            <h3>Review current international rates</h3>
         </div>
         <div id="selectHeader"><span>View rates by country:</span></div>
         <div class="selectWrapper">
-            <div class="irates">
-                <div id="tableSelect">
-                    <div id="selectArea">
-                        <span class="selectHolder">All</span>
-                        <select id="countrySelect" size="1" class="CountrySelect" title="All">
-                            <option type="select" disabled="">Select Country</option><option type="All" country_id="all"
-                                                                                             selected="selected">All</option>
-                        </select>
-                    </div>
-                    <div class="selectButton state-enable" data-dtm-element="button" data-dtm-name="Search">Search</div>
+            <div id="tableSelect">
+                <div id="selectArea">
+                    <span class="selectHolder">All</span>
+                    <select class="dropdown" id="select">
+                        <option>Select Country</option>
+                    </select>
                 </div>
+                <div class="selectButton" id="search" data-dtm-element="button" data-dtm-name="Search">Search</div>
             </div>
         </div>
     </div>
@@ -37,6 +32,3 @@
 <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
-
-
-
