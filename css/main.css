@@ -1,0 +1,148 @@
+header, section, footer, aside, nav,
+article, figure, audio, video,
+canvas  { display:block; }
+
+body {
+    color:#585858;
+    font-family: Arial;
+    font-size: 12px
+}
+
+#wrapper {
+    width:800px;
+    margin: 10px auto;
+}
+
+.hide {
+    display: none;
+}
+
+#content div.title h3{
+    font-weight:normal;
+}
+
+#selectHeader {
+    font-size:16px;
+    padding:12px 0 16px 22px;
+}
+
+#selectArea{
+    width:326px;
+    height:40px;
+    display:inline-block;
+    display:inline-block;
+    position:relative;
+    vertical-align:middle;
+    background-color: #fbfbfb;
+    border: 1px solid #e9e9e9;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 0 #f1f1f1;
+}
+
+#selectArea::after {
+    content: '';
+    border: solid #b4b4b4;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 13px;
+    right: 13px;
+}
+
+#selectArea::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 1px;
+    background-color: #e9e9e9;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 37px;
+}
+
+#selectArea select {
+    width:326px;
+    height:40px;
+    opacity:0;
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:10;
+}
+
+#tableSelect .selectButton {
+    cursor:pointer;
+    display:inline-block;
+    background:#ff9419;
+    line-height:40px;
+    height:40px;
+    border-radius:5px;
+    padding:0 40px;
+    color:#FFF;
+    cursor:pointer;
+    font-size:15px;
+    margin-left:6px;
+    vertical-align:middle;
+}
+
+.selectWrapper {
+    border:1px solid #e6e6e6;
+    border-radius:5px;
+    padding:24px 0 5px 24px;
+    margin-left:22px;
+}
+
+#selectArea .selectHolder {
+    font-size:16px;
+    line-height:40px;
+    padding-left:13px;
+    display: inline-block;
+    width: 250px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#selectArea .selectHolder.holded {
+    color:#CCC;
+}
+
+.selectWrapper #tableCenter {
+    clear:both;
+    padding-left:0;
+    padding-top:20px;
+    padding-right:26px;
+}
+
+.selectWrapper .WaitBlock {
+    position: relative;
+    left: 222px;
+}
+
+.selectWrapper #resultTable {
+    width: 100%;
+    color: #333;
+}
+
+.selectWrapper .headTable {
+    font-weight:bold;
+}
+.selectWrapper .greyRow td {
+    background:#d9e0e4;
+}
+.selectWrapper #colCountry {
+    width:100px;
+}
+
+.selectWrapper #colType {
+    width:100px;
+}
+
+.selectWrapper #colCode {
+    width:160px;
+}
