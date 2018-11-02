@@ -14,6 +14,16 @@ appEvent.getByTag = function (name) {
     return document.getElementsByTagName(name)
 };
 
+/* Loader */
+appEvent.loaderActive = function () {
+    this.getById('table').style.display = 'none';
+    this.getById('loader').style.display = 'block';
+};
+appEvent.loaderHide = function () {
+    this.getById('table').style.display = 'block';
+    this.getById('loader').style.display = 'none';
+};
+
 /* Method for load country data */
 appEvent.loadCountriesList = function () {
 
@@ -27,6 +37,8 @@ appEvent.loadCountriesList = function () {
     script.id = "cities";
     this.getByTag("head")[0].appendChild(script);
 
+    appEvent.loaderActive();
+
     /* Remove injected script tag from DOM */
     var scriptTags = script.parentNode.childNodes;
     [].forEach.call(scriptTags, function (tag) {
@@ -38,6 +50,8 @@ appEvent.loadCountriesList = function () {
 
 /* Methods that will be passed as callback when the script tag dynamic injection */
 appEvent.getCountriesCB = function (res) {
+
+    appEvent.loaderHide();
 
     var self = this;
     if (res.status.code == 0 && res.status.success) {
@@ -62,6 +76,8 @@ appEvent.getCountriesCB = function (res) {
 };
 
 appEvent.getCountryItemCB = function (res) {
+
+    appEvent.loaderHide();
 
     if (res.status.code == 0 && res.status.success) {
 
@@ -179,6 +195,8 @@ appEvent.getCountryInfo = function (e) {
         script.id = "cities";
         this.getByTag("head")[0].appendChild(script);
 
+        appEvent.loaderActive();
+
         /* Remove injected script tag from DOM */
         var scriptTags = script.parentNode.childNodes;
         [].forEach.call(scriptTags, function (tag) {
@@ -188,6 +206,17 @@ appEvent.getCountryInfo = function (e) {
         });
     }
 };
+
+appEvent.setCityName = function (cityName) {
+    var span = appEvent.getById("cityName");
+    span.innerHTML = cityName;
+};
+
+document.querySelector("select").addEventListener('change', function (e) {
+    var select = appEvent.getById("select");
+    var cityName = select.options[select.selectedIndex].text;
+    return appEvent.setCityName(cityName);
+});
 
 window.onload = function () {
     appEvent.loadCountriesList();

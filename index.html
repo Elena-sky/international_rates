@@ -11,21 +11,21 @@
 <body>
 <div id="wrapper">
     <div>
-        <div>
+        <div id="selectHeader">
             <h1>International dialing rates from North America</h1>
             <h3>Review current international rates</h3>
+            <span>View rates by country:</span>
         </div>
-        <div id="selectHeader"><span>View rates by country:</span></div>
         <div class="selectWrapper">
             <div id="tableSelect">
                 <div id="selectArea">
-                    <span class="selectHolder">All</span>
+                    <span id='cityName' class="selectHolder">Select Country</span>
                     <select class="dropdown" id="select">
-                        <option>Select Country</option>
                     </select>
                 </div>
                 <div class="selectButton" id="search" data-dtm-element="button" data-dtm-name="Search">Search</div>
             </div>
+            <div id="loader"><img src="img/absoft.png" /></div>
             <div id="table"></div>
         </div>
     </div>
