@@ -126,7 +126,7 @@ appEvent.getCountryItemCB = function (res) {
                                 if(!finalRes[type]['areaCodes']) finalRes[type]['areaCodes'] = '';
 
                                 // String( areaCode + phonePart )
-                                var areaCodeFull = areaCode + phonePart;
+                                var areaCodeFull = areaCode + '' + phonePart;
                                 finalRes[type]['areaCodes'] = finalRes[type]['areaCodes'] + areaCodeFull + ', ';
                             }
                         }
